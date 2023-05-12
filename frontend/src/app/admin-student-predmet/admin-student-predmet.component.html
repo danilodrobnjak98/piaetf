@@ -1,0 +1,61 @@
+<section id="contact" class="contact">
+    <div class="container">
+        <h3 align="center">Dodavanje studenata</h3>
+<div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+  <form class="php-email-form">
+      <div class="row" align="center">
+      
+
+        <div class="col-lg-12 form-group">
+            Izbor studenta : &nbsp;&nbsp;
+            <select  name="predavanja" [(ngModel)]="username">
+                <option *ngFor="let nas of sviStudenti" [ngValue]="nas.username">
+                    
+                {{nas.username}}
+                </option>
+            </select>
+
+
+            <div class="poruka">
+             {{poruka1}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+            Izbor za predavanje : &nbsp;&nbsp;
+            <select multiple name="predavanja" (change)="onChange($event.target.value)" [(ngModel)]="trenutni">
+                <option *ngFor="let nas of sviPredmeti" [ngValue]="nas">
+                    
+                  {{nas.smer}} : {{nas.naziv}}
+                </option>
+            </select>
+
+
+            <div class="poruka">
+             {{poruka1}}
+            </div>
+          </div><br>
+          
+        
+
+
+      </div>
+     
+      <div class="text-center"><button type="submit" (click)="dodaj()">Dodaj Predmet</button></div>
+      <br>
+      <div class="uspeh" align="center">
+        {{porukaUspeh}}
+      </div>
+      <br>
+      <br>
+      <br>
+ 
+   
+    
+  </form>
+  </div>
+ 
+  
+ 
+    </div>
+  
+</section>

@@ -1,0 +1,108 @@
+<section id="contact" class="contact">
+    <div class="container">
+        <h3 align="center">Ažuriranje predmeta</h3>
+
+        <div *ngIf="sviPredmeti.length==0">
+
+          <br><br><br><br>
+          <p align="center">  
+
+            Nemate ovlascenje da uredjujete nijedan predmet.
+          </p>
+
+        </div>
+ 
+        <div *ngIf="sviPredmeti.length!=0">
+          <div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+            <form class="php-email-form">
+              <div class="row" align="center">
+               
+                <div class="col-lg-12 form-group">
+                    Izaberite predmet : &nbsp;&nbsp;
+                     <select name="predmet" id="" [(ngModel)]="predmet">
+                        <option *ngFor="let predmet of sviPredmeti" [ngValue]="predmet.sifra">
+                           
+                           
+                            {{predmet.sifra}}-{{predmet.naziv}}
+                        </option>
+                     </select>
+          
+          
+                   </div><br>
+                  <div class="col-lg-12 form-group">
+                   Izaberite tip : &nbsp;&nbsp;
+                    <select name="tip" id="" [(ngModel)]="tip">
+                        <option value="izborni">Izborni</option>
+                        <option value="obavezni">Obavezni</option>
+                    </select>
+          
+          
+                  </div><br>
+                  <div class="col-lg-12 form-group">
+                    <input type="text" name="espb"id="" placeholder="Dodaj br ESPB bodova" [(ngModel)]="espb" />
+                 
+                  </div><br>
+          
+                 
+                
+                  <div class="col-lg-12 form-group">
+                    <input type="text" name="termin_predavanja" id="" placeholder="Unesite termin predavanja" [(ngModel)]="termin_predavanja" />
+                    
+                  </div><br>
+                  <div class="col-lg-12 form-group">
+                    <input type="text" name="termin_vezbi" id="" placeholder="Unesite termin vezbi" [(ngModel)]="termin_vezbi" />
+                   
+                  </div><br>
+                  <div class="col-lg-12 form-group">
+                  Da li postoje laboratorijske vezbe :&nbsp;&nbsp;
+                  <select name="lab" id="" [(ngModel)]="lab">
+                      <option value="da">Da</option>
+                      <option value="ne">Ne</option>
+                  </select>
+                    
+                  </div><br>
+                  <div class="col-lg-12 form-group">
+                 <textarea name="propozicije" id="" cols="30" rows="10" placeholder="Unesite propozcije" [(ngModel)]="propozicije"></textarea>
+                   
+                  </div><br>
+                  <div class="col-lg-12 form-group">
+                    Izaberite semestar : &nbsp;&nbsp;
+                    <select name="semestar" id="" [(ngModel)]="semestar">
+                        <option value="1">I semsestar</option>
+                        <option value="2">II semestar</option>
+                        <option value="3">III semestar</option>
+                        <option value="4">IV semestar</option>
+                        <option value="5">V semestar</option>
+                        <option value="6">VI semestar</option>
+                        <option value="7">VII semestar</option>
+                        <option value="8">VIII semestar</option>
+                    </select>
+          
+          
+                    
+                  </div><br>
+               
+                
+          
+          
+              </div>
+             
+              <div class="text-center"><button type="submit" (click)="azuriraj()">Azuriraj Predmet</button></div>
+              <br>
+              <div class="uspeh" align="center">
+                {{konacnaPoruka}}
+              </div>
+              <br>
+              <br>
+              <br>
+          
+           
+            
+          </form>
+            </div>
+
+        </div>
+ 
+    </div>
+  
+</section>

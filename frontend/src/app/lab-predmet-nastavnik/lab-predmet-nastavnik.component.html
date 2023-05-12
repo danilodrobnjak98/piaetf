@@ -1,0 +1,64 @@
+<section id="contact" class="contact">
+    <div class="container">
+        <h3 align="center">Laboratorijske vezbe</h3>
+<div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+  <form  role="form" class="php-email-form">
+      <div class="row" align="center">
+        <div class="col-lg-12 form-group"> 
+           Izaberite predmet : 
+          <select name="zaposlen" id="" [(ngModel)]="predmet">
+              <option *ngFor="let zap of sviPredmeti" [ngValue]="zap.sifra">
+                {{zap.sifra}}-{{zap.naziv}}
+
+              </option>
+          </select>
+          <div class="poruka">
+            <img [src]="url" height="200" id="bla"> <br/>
+            <input type='file' (change)="onSelectFile($event)">
+          </div>
+        </div><br>
+
+        <div class="col-lg-12 form-group"> 
+            <textarea name="tekst" id="" cols="30" rows="10" placeholder="Ovde unesite ako imate neke dodatne teksutalne informacije" [(ngModel)]="tekst"></textarea>
+        </div>
+       
+      </div>
+      <div class="text-center"><button type="submit" (click)="add()">Dodaj</button></div>
+     
+
+
+
+      <br><br><br><br>
+
+     <div *ngIf="sviMaterijali.length==0">
+        <p>Trenutno niste objavili nijedan materijal za Lab vezbe</p>
+     </div>
+     <div *ngIf="sviMaterijali.length!=0">
+        <div class="col-lg-12 form-group"> 
+            Materijali koje ste vi objavili
+            <select name="zaposlen" id="" [(ngModel)]="brisanje">
+                <option *ngFor="let zap of sviMaterijali" [ngValue]="zap.ime_fajla">
+                
+                     {{zap.sifra}}-{{zap.ime_fajla}}-{{zap.datum}}
+     
+                </option>
+            </select>
+           
+          </div><br>
+          <div class="text-right"><button type="submit" (click)="delete()">Brisi</button></div>
+     </div>
+      
+      <br>
+      <br>
+      <br>
+ 
+    
+    
+  </form>
+  </div>
+ 
+ 
+ 
+    </div>
+  
+</section>

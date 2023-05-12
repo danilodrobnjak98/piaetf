@@ -1,0 +1,9 @@
+1.PROPOZICIJE SKORO SVUDA
+2.OBAVESTENJA FILTRIRANJE OKO DATUMA
+3.DODAVANJE VESTI UREDJEVINJE DA AKO NIJE NA PREDMETU SAMO PORUKU PRIKAZE
+
+5.Sortiranje predavanja
+6.sortiranje vezbe
+7.licni_podaci kod zaposlenih neki u bazi imaju neki ne, ispitati koja je fora sa tim
+8. da li student koji je na masteru moze da se prijavi na predmete sa osnovnih studija i obrnuto
+

@@ -1,0 +1,106 @@
+<section id="contact" class="contact">
+    <div class="container">
+        <h3 align="center">Izaberite tip korisnika</h3>
+<div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+  <form  role="form" class="php-email-form">
+      <div class="row" align="center">
+        
+        
+        <div class="col-lg-12 form-group">
+          Tip Korisnika : &nbsp; &nbsp; &nbsp;
+         <select name="tipp" [(ngModel)]="tipp">
+           <option value="student">Student</option>
+           <option value="zaposlen">Zaposlen</option>
+         
+         </select>
+         
+         <br><br><br>
+       
+        </div>
+
+        <div *ngIf="tipp==student">
+
+            <table>
+
+                <tr>
+
+                    <td>Korisnicko ime</td>
+                    <td>Indeks</td>
+                    <td>Tip studija</td>
+                    <td>Ime</td>
+                    <td>Prezime</td>
+                    <td>Status</td>
+                </tr>
+                <tr>
+
+                </tr>
+                <tr *ngFor="let std of sviStudenti">
+                    <td>
+                        {{std.username}}
+                    </td>
+                    <td>
+                        {{std.indeks}}
+                    </td>
+                    <td>
+                        {{std.tip}}
+                    </td>
+                    <td>
+                        {{std.ime}}
+                    </td>
+                    <td>
+                        {{std.prezime}}
+                    </td>
+                    <td>
+                        {{std.status}}
+                    </td>
+                    <td >
+                        <button type="submit" (click)="ukloniStudenta(std)" > Ukloni</button>
+                    </td>
+                </tr>
+            </table>
+
+
+        </div>
+        <div *ngIf="tipp==zaposlen">
+
+
+            <table>
+                <tr>
+                    <td>Korisnicko ime</td>
+                    <td>Ime</td>
+                    <td>Prezime</td>
+                    <td>Zvanje</td>
+                    <td>Status</td>
+                </tr>
+                <tr></tr>
+                <tr *ngFor="let nast of sviNastavnici">
+                    <td>
+                        {{nast.username}}
+                    </td>
+                    <td>
+                        {{nast.ime}}
+                    </td>
+                    <td>
+                        {{nast.prezime}}
+                    </td>
+                    <td>
+                        {{nast.zvanje}}
+                    </td>
+                    <td>
+                        {{nast.status}}
+                    </td>
+                    <td>
+                        <button type="submit" (click)="ukloniNastavnika(nast)">Ukloni</button>
+                    </td>
+                </tr>
+            </table>
+
+        </div>
+        
+        
+
+      </div>
+      </form>
+      </div>
+      </div>
+      </section>

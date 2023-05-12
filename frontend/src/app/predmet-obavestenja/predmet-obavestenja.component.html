@@ -1,0 +1,63 @@
+<section id="faq" class="faq section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Obavestenja</h2>
+      </div>
+
+      <div class="row  d-flex align-items-stretch">
+
+        <div class="col-lg-6 faq-item" data-aos="fade-up">
+         
+            
+            <div *ngIf="sveObjave.length==0">
+
+                <p>
+                    Trenutno nema novih objava!
+                </p>
+            </div>
+            <div *ngIf="sveObjave.length!=0">
+
+           
+
+                 
+                <div *ngFor="let objava of sveObjave" [class.stariji]="checkDates(objava.datum)">
+
+
+                    <h4>
+                        {{objava.naslov}}
+                    </h4>
+
+                    <p>
+                        {{objava.sadrzaj}}
+                    </p>
+                    
+                    <div>
+                        {{objava.datum}}
+                    </div>
+                    <div *ngIf="objava.sadrzaj_pdf!=prazno">
+
+                        <a class="link" (click)="obavestenje(objava)">
+                            Preuzmi sadržaj
+                        </a>
+
+                    </div>
+
+                    <br>
+                </div>
+                
+
+            </div>
+
+
+        </div>
+
+      
+          
+      
+
+           
+
+    </div>
+    </div>
+  </section><!-- End Frequently Asked Questions Section -->

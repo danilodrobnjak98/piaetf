@@ -1,0 +1,13 @@
+.poruka{
+    color: red;
+    font-size: large;
+    font-weight: bolder;
+    font-style: italic;
+}
+
+.uspeh{
+    color: green;
+    font-size: large;
+    font-weight: bolder;
+    font-style: italic;
+}

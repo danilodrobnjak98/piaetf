@@ -1,0 +1,60 @@
+<section id="faq" class="faq section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Moji predmeti</h2>
+      </div>
+
+      <div class="row  d-flex align-items-stretch">
+
+        <div class="col-lg-12 faq-item" data-aos="fade-up">
+       
+            <h4>Trenutno slusanje</h4>
+           <div *ngIf="moji.length==0">
+                <p>
+                    Trenutno niste prijavli da slušate nijedan predmet
+                </p>
+           </div>
+           <div *ngIf="moji.length>0">
+            <table>
+              
+                <tr >
+                    
+                    <th>Šifra</th>
+                    <th>Naziv</th>
+                    
+                </tr>
+                <tr>
+                    
+                </tr>
+                <tr *ngFor="let predmet of moji">
+
+                    <td>
+                      <a class="link" (click)="radi(predmet)">
+                        {{predmet.sifra}}
+                      </a>
+                    </td>
+                    <td>
+                      {{predmet.naziv}}
+                    </td>
+                    
+                    
+
+                </tr>
+              
+            </table>
+           </div>
+        
+        </div>
+        
+        </div>
+
+
+     
+           
+           
+
+      </div>
+
+    
+  </section><!-- End Frequently Asked Questions Section -->

@@ -1,0 +1,51 @@
+<section id="contact" class="contact">
+    <div class="container">
+        <h3 align="center">Dodaj obaveštenje</h3>
+<div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+  <form class="php-email-form">
+      <div class="row" align="center">
+        <div class="col-lg-12 form-group">
+          <input type="text" name="naslov"id="" placeholder="Dodaj naslov" [(ngModel)]="naslov" />
+          <div class="poruka">
+           {{poruka1}}
+          </div>
+        </div><br>
+        <div class="col-lg-12 form-group">
+         <textarea name="sadrzaj" id="" cols="30" rows="10" placeholder="Unesite sadrzaj" [(ngModel)]="sadrzaj"></textarea>
+          <div class="poruka">
+           {{poruka2}}
+          </div>
+        </div>
+        <div class="col-lg-12 form-group">
+           <b> Izaberite tip :  </b>
+            <select name="tip" id="" [(ngModel)]="tip">
+                <option value="takmicenje">Takmičenje</option>
+                <option value="takmicenje">Konferencija</option>
+                <option value="takmicenje">Praksa</option>
+                <option value="takmicenje">Posao</option>
+            </select>
+             <div class="poruka">
+              {{poruka3}}
+             </div>
+           </div>
+      </div>
+     
+      <div class="text-center"><button type="submit" (click)="dodaj()">Dodaj obavestenje</button></div>
+      <br>
+      <div class="uspeh" align="center">
+        {{PorukaUspeh}}
+      </div>
+      <br>
+      <br>
+      <br>
+ 
+   
+    
+  </form>
+  </div>
+ 
+  
+ 
+    </div>
+  
+</section>

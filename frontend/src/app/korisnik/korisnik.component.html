@@ -1,0 +1,38 @@
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex">
+      
+      <div class="logo me-auto">
+        <h1 class="text-light"><a routerLink="profil" id="btn"><span>RTI KATEDRA</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+            <li class="active"><a id="radi" routerLink="profil">Profil</a></li>
+          <li ><a  routerLink="predmetProfesor">Predmeti</a></li>
+         
+          
+         
+          <li class="drop-down"><a >Vesti</a>
+            <ul>
+              <li><a routerLink="dodajPObavestenje">Dodavanje</a></li>
+            
+              <li><a routerLink="izmeniPObavestenje">Izmena</a></li>
+              <li><a routerLink="obrisiPredmetPObavestenje">Obriši</a></li>
+           
+          
+            </ul>
+          </li>
+          <li><a routerLink="promenaLozinkeKorisnik" id="promena">Promeni lozinku</a></li>
+          
+          <li><a routerLink="../prijava" (clik)="kraj()">Odjavi se</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+  
+  <router-outlet></router-outlet>
+  

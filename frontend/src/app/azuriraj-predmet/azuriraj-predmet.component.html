@@ -1,0 +1,111 @@
+<section id="contact" class="contact">
+    <div class="container">
+        <h3 align="center">Ažuriraj predmet</h3>
+<div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+  <form class="php-email-form">
+      <div class="row" align="center">
+       
+        <div class="col-lg-12 form-group">
+            Izaberite predmet : &nbsp;&nbsp;
+             <select name="predmet" id="" [(ngModel)]="predmet">
+                <option *ngFor="let predmet of sviPredmeti" [ngValue]="predmet.sifra">
+                    {{predmet.sifra}}
+                </option>
+             </select>
+ 
+ 
+           </div><br>
+          <div class="col-lg-12 form-group">
+           Izaberite tip : &nbsp;&nbsp;
+            <select name="tip" id="" [(ngModel)]="tip">
+                <option value="izborni">Izborni</option>
+                <option value="obavezni">Obavezni</option>
+            </select>
+
+
+          </div><br>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="espb"id="" placeholder="Dodaj br ESPB bodova" [(ngModel)]="espb" />
+         
+          </div><br>
+
+         
+        
+          <div class="col-lg-12 form-group">
+            <input type="text" name="termin_predavanja" id="" placeholder="Unesite termin predavanja" [(ngModel)]="termin_predavanja" />
+            
+          </div><br>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="termin_vezbi" id="" placeholder="Unesite termin vezbi" [(ngModel)]="termin_vezbi" />
+           
+          </div><br>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="lab" id="" placeholder="Da li postoje lab vezbe" [(ngModel)]="lab" />
+            
+          </div><br>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="propozicije" id="" placeholder="Unesite propozicije" [(ngModel)]="propozicije" />
+           
+          </div><br>
+          <div class="col-lg-12 form-group">
+            Izaberite semestar : &nbsp;&nbsp;
+            <select name="semestar" id="" [(ngModel)]="semestar">
+                <option value="1">I semsestar</option>
+                <option value="2">II semestar</option>
+                <option value="3">III semestar</option>
+                <option value="4">IV semestar</option>
+                <option value="5">V semestar</option>
+                <option value="6">VI semestar</option>
+                <option value="7">VII semestar</option>
+                <option value="8">VIII semestar</option>
+            </select>
+
+
+            
+          </div><br>
+          <div class="col-lg-12 form-group">
+            Izbor za predavanje : &nbsp;&nbsp;
+            <select multiple name="predavanja" (change)="onChange($event.target.value)" [(ngModel)]="predavanja">
+                <option *ngFor="let nas of sviZaposleni" [ngValue]="nas">
+                    {{nas.username}}
+                </option>
+            </select>
+
+
+           
+          </div><br>
+          <div class="col-lg-12 form-group">
+            Izbor za vezbe : &nbsp;&nbsp;
+            <select name="vezbe" multiple (change)="onChange2($event.target.value)" [(ngModel)]="vezbe" >
+                <option *ngFor="let nas of sviZaposleni" [ngValue]="nas">
+                    {{nas.username}}
+                </option>
+            </select>
+
+
+           
+          </div><br>
+        
+
+
+      </div>
+     
+      <div class="text-center"><button type="submit" (click)="azz()">Azuriraj Predmet</button></div>
+      <br>
+      <div class="uspeh" align="center">
+        {{porukaUspeh}}
+      </div>
+      <br>
+      <br>
+      <br>
+ 
+   
+    
+  </form>
+  </div>
+ 
+  
+ 
+    </div>
+  
+</section>

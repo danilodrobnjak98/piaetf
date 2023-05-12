@@ -1,0 +1,157 @@
+<section id="contact" class="contact">
+    <div class="container">
+        <h3 align="center">Izaberite tip korisnika</h3>
+<div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+  <form  role="form" class="php-email-form">
+      <div class="row" align="center">
+        
+        
+        <div class="col-lg-12 form-group">
+          Tip Korisnika : &nbsp; &nbsp; &nbsp;
+         <select name="tipp" [(ngModel)]="tipp">
+           <option value="student">Student</option>
+           <option value="zaposlen">Zaposlen</option>
+         
+         </select>
+         
+         <br><br><br>
+       
+        </div>
+        
+        
+
+      </div>
+
+      <div *ngIf="tipp==student" align="center">
+
+
+        <div class="col-lg-12 form-group">
+            <input type="text" name="ime" placeholder="Ime" [(ngModel)]="ime" />
+            <div class="poruka">
+  
+              {{poruka1}}
+  
+            </div>
+          </div>
+       
+          <div class="col-lg-12 form-group">
+            <input type="text" name="prezime" placeholder="Prezime" [(ngModel)]="prezime"/>
+            <div class="poruka">
+              {{poruka2}}
+            </div>
+          </div>
+          <div class="col-lg-12 form-group">
+            Tip studija : &nbsp; &nbsp; &nbsp;
+           <select name="tip" [(ngModel)]="tip">
+             <option value="d">Osnovne studije</option>
+             <option value="m">Master studije</option>
+             <option value="p">Doktorske studije</option>
+           </select>
+           <div class="poruka">
+             {{poruka0}}
+           </div>
+          </div>
+          <div class="text-center"><button type="submit" (click)="radi()">Registruj</button></div>
+      <div class="uspeh">
+        {{poruka3}} 
+      </div>
+
+
+      </div>
+
+      <div *ngIf="tipp==zaposlen" align="center">
+
+        <div class="col-lg-12 form-group">
+          <input type="text" name="imee" placeholder="Ime" [(ngModel)]="imee" />
+          <div class="poruka">
+
+            {{poruka10}}
+
+          </div>
+        </div>
+     
+        <div class="col-lg-12 form-group">
+          <input type="text" name="prezimee" placeholder="Prezime" [(ngModel)]="prezimee"/>
+          <div class="poruka">
+            {{poruka20}}
+          </div>
+        </div>
+        <div class="col-lg-12 form-group">
+          <input type="text" name="adresa" placeholder="Adresa" [(ngModel)]="adresa"/>
+          <div class="poruka">
+            {{poruka30}}
+          </div>
+        </div>
+        <div class="col-lg-12 form-group">
+          <input type="text" name="mobilni" placeholder="Mobilni telefon" [(ngModel)]="mobilni"/>
+        
+        </div>
+        <div class="col-lg-12 form-group">
+          <input type="text" name="sajt" placeholder="Veb sajt" [(ngModel)]="sajt"/>
+         
+        </div>
+        <textarea name="podaci" id="" cols="30" rows="10" placeholder="Licni podaci" [(ngModel)]="podaci"></textarea>
+        <div class="col-lg-12 form-group">
+         Zvanje : &nbsp; &nbsp; &nbsp;
+         <select name="zvanje" [(ngModel)]="zvanje">
+           <option value="redovni">Redovni profesor</option>
+           <option value="vanredni">Vanredni profesor</option>
+           <option value="docent">Docent</option>
+           <option value="asistent">Asistent</option>
+           <option value="saradnik">Saradnik u nastavi</option>
+           <option value="istrazivac">Istrazivac</option>
+           <option value="lab_inzenjer">Laboratorijski inzenjer</option>
+           <option value="lab_tehnicar">Laboratorijski tehnicar</option>
+
+         </select>
+         <div class="poruka">
+           {{poruka40}}
+         </div>
+        </div>
+        <div class="col-lg-12 form-group">
+          <input type="text" name="kabinet" placeholder="Kabinet" [(ngModel)]="kabinet"/>
+          <div class="poruka">
+            {{poruka60}}
+          </div>
+        </div>
+        <div class="text-center"><button type="submit" (click)="nastavnik()">Registruj</button></div>
+    <div class="uspeh">
+      {{poruka50}} 
+    </div>  
+
+
+      <div *ngIf="user">
+
+        <table>
+          <tr>
+            <td>Korisnicko ime</td>
+            <td>Loznika</td>
+            <td>Status</td>
+          </tr>
+          <tr></tr>
+          <tr>
+            <td name="user">
+              {{user}}
+            </td>
+            <td name="loz">
+              {{loz}}
+            </td>
+            <td name="statusss">
+              {{statusss}}
+            </td>
+          </tr>
+        </table>
+
+      </div>
+
+      </div>
+     
+     
+      
+   
+  </form>
+  </div>
+  <router-outlet></router-outlet>
+    </div>
+  
+</section>
