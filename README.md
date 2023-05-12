@@ -1,2 +1,2 @@
 # piaetf
-Projekat iz predmeta Programiranje internet aplikacija (PIA) za avgust/septembar 2022. Elektrotehnicki fakultet u Beogradu (ETF)
+Projekat iz predmeta Programiranje internet aplikacija (PIA). Elektrotehnicki fakultet u Beogradu (ETF)
