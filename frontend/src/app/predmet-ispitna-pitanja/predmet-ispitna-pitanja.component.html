@@ -1,0 +1,59 @@
+<section id="contact" class="contact">
+    <div class="container">
+        <h3 align="center">Prethodni rokovi</h3>
+<div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+  <form  role="form" class="php-email-form">
+      <div class="row" align="center">
+        <div class="col-lg-12 form-group">
+
+            <div *ngIf="materijali.length==0">
+
+
+                <p>Materijali su izradi, trenutno nisu zavrseni!</p>
+
+            </div>
+
+            <div *ngIf="materijali.length!=0">
+
+                <table>
+                    <tr>
+                        <th>Naziv</th>
+                        <th>Velicina</th>
+                        <th>Datum</th>
+                        <th>Nastavnik koji je postavio</th>
+                    </tr>
+                    <tr></tr>
+                    <tr *ngFor="let mat of materijali">
+                        <td>
+                            <a href='{{"../../assets/materijali/"+mat.ime_fajla}}'>
+                                {{mat.ime_fajla}}
+                            </a>
+                        </td>
+                        <td>
+                            {{mat.velicina}}KB
+                        </td>
+                        <td>
+                            {{mat.datum}}
+                        </td>
+                        <td>
+                            {{mat.username}}
+                        </td>
+                    </tr>
+                </table>
+
+
+            </div>
+
+
+        </div>
+      </div>
+          
+  </form>
+  </div>
+ 
+  <router-outlet></router-outlet>
+ 
+    </div>
+  
+</section>
+

@@ -1,0 +1,46 @@
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex">
+      
+      <div class="logo me-auto">
+        <h1 class="text-light"><a routerLink="pocetna" id="btn"><span>RTI katedra</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a routerLink="pocetna">Početna</a></li>
+          <li><a routerLink="zaposleni">Zaposleni</a></li>
+          <li><a routerLink="obavestenje">Obaveštenja</a></li>
+         
+          <li class="drop-down"><a >Osnovne studije</a>
+            <ul>
+              <li><a routerLink="rtiPredmeti">Odsek za računarsku tehniku i informatiku</a></li>
+            
+              <li><a routerLink="siPredmeti">Odsek za softversko inzenjerstvo</a></li>
+              <li><a routerLink="ostaliPredmeti">Ostali odseci</a></li>
+          
+            </ul>
+          </li>
+          <li><a routerLink="masterPredmeti">Master studije</a></li>
+          <li><a routerLink='projekti-ponude'>Projekti</a></li>
+          <li class="drop-down"><a >Nauka</a>
+            <ul>
+           
+            
+              <li><a routerLink="istrazivanja">Istraživanja</a></li>
+              <li><a routerLink="projekti-nauka">Projekti</a></li>
+          
+            </ul>
+          </li>
+          <li><a routerLink="kontakt">Kontakt</a></li>
+          <li><a routerLink="prijava">Prijavi se</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+  
+  <router-outlet></router-outlet>
+  

@@ -1,0 +1,46 @@
+  <!-- ======= Header ======= -->
+  <header id="header">
+    <div class="container d-flex">
+      
+      <div class="logo me-auto">
+        <h1 class="text-light"><a routerLink="dodajObavestenje" id="btn"><span>RTI katedra</span></a></h1>
+        <!-- Uncomment below if you prefer to use an image logo -->
+        <!-- <a href="index.html"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
+      </div>
+
+      <nav class="nav-menu float-right d-none d-lg-block">
+        <ul>
+          <li class="active"><a id="radi" routerLink="dodajObavestenje">Dodaj obaveštenje</a></li>
+          <li><a routerLink="izmenaObavestenja">Izmena obavestenja</a></li>
+          <li><a routerLink="dodajSliku">Dodaj sliku</a></li>
+          
+         
+          <li class="drop-down"><a >Korisnik</a>
+            <ul>
+              <li><a routerLink="dodajKorisnika">Dodaj korisnika</a></li>
+            
+              <li><a routerLink="azuriraj">Ažuriraj korisnika</a></li>
+              <li><a routerLink="obrisiKorisnika">Obriši korisnika</a></li>
+              <li><a routerLink="adminStudentPredmet">Upis studenta</a></li>
+          
+            </ul>
+          </li>
+          <li class="drop-down"><a>Predmet</a>
+            <ul>
+              <li><a routerLink="dodajPredmet">Dodaj predmet</a></li>
+            
+              <li><a routerLink="azurirajPredmet">Ažuriraj predmet</a></li>
+              <li><a routerLink="obrisiPredmet">Obriši predmet</a></li>
+          
+            </ul>
+          </li>
+          
+          <li><a routerLink="../prijava" (clik)="kraj()">Odjavi se</a></li>
+        </ul>
+      </nav><!-- .nav-menu -->
+
+    </div>
+  </header><!-- End Header -->
+  
+  <router-outlet></router-outlet>
+  

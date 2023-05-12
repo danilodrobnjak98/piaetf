@@ -1,0 +1,102 @@
+
+<div *ngIf="slika" align="left">
+  
+    <img src='{{"../../assets/img/"+putanja}}' alt="" width="100px" height="100px">
+  
+</div>
+
+<section id="contact" class="contact">
+    <div class="container">
+        <h3 align="center">Azurirajte profil</h3>
+<div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+  <form  role="form" class="php-email-form">
+      <div class="row" align="center">
+        
+        <div class="col-lg-12 form-group">
+          <input type="text" name="adresa" placeholder="Adresa" [(ngModel)]="adresa" />
+          <div class="poruka">
+
+           
+
+          </div>
+        </div>
+        <div class="col-lg-12 form-group">
+          <input type="text" name="telefon" placeholder="Telefon" [(ngModel)]="telefon"/>
+          <div class="poruka">
+            
+          </div>
+        </div>
+        <div class="col-lg-12 form-group">
+            <textarea name="biografija" id="" cols="30" rows="10" placeholder="Biografija" [(ngModel)]="biografija"></textarea>
+            <div class="poruka">
+              
+            </div>
+          </div>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="kabinet" placeholder="Kabinet" [(ngModel)]="kabinet"/>
+            <div class="poruka">
+              
+            </div>
+          </div>
+        
+       
+
+      </div>
+     
+     
+      <div class="text-center"><button type="submit" (click)="azuriraj()">Azuriraj</button></div>
+      <div class="uspeh">
+      
+      </div>
+     
+  </form>
+  </div>
+   </div>
+
+   <div>
+
+
+    <table align="center">
+        <tr>
+          <th>Korisnicko ime</th>
+          <th>Ime</th>
+          <th>Prezime</th>
+          <th>Adresa</th>
+          <th>Mobilni</th>
+          <th>Kabinet</th>
+          <th>Licni podaci</th>
+        </tr>
+        <tr></tr>
+        <tr>
+            <td>
+                {{nastavnik.username}}
+            </td>
+            <td>
+                {{nastavnik.ime}}
+            </td>
+            <td>
+                {{nastavnik.prezime}}
+            </td>
+            <td>
+                {{nastavnik.adresa}}
+            </td>
+            <td>
+                {{nastavnik.mobilni}}
+            </td>
+            <td>
+                {{nastavnik.kabinet}}
+            </td>
+            <td>
+                {{nastavnik.licni_podaci}}
+            </td>
+        </tr>
+        <div class="uspeh">
+            {{poruka}}
+        </div>
+    </table>
+
+
+   </div>
+  
+</section>
+

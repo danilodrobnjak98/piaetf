@@ -1,0 +1,155 @@
+<section id="contact" class="contact">
+    <div class="container">
+        <h3 align="center">Dodaj predmet</h3>
+<div class="col-lg-12" data-aos="fade-up" data-aos-delay="300">
+  <form class="php-email-form">
+      <div class="row" align="center">
+        <div class="col-lg-12 form-group">
+          <input type="text" name="naziv" id="" placeholder="Dodaj naziv" [(ngModel)]="naziv" />
+          <div class="poruka">
+           {{poruka1}}
+          </div>
+        </div><br>
+        <div class="col-lg-12 form-group">
+            <input type="text" name="sifra" id="" placeholder="Dodaj sifru" [(ngModel)]="sifra" />
+            <div class="poruka">
+             {{poruka2}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+           Izaberite tip : &nbsp;&nbsp;
+            <select name="tip" id="" [(ngModel)]="tip">
+                <option value="izborni">Izborni</option>
+                <option value="obavezni">Obavezni</option>
+            </select>
+
+
+            <div class="poruka">
+             {{poruka3}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="espb"id="" placeholder="Dodaj br ESPB bodova" [(ngModel)]="espb" />
+            <div class="poruka">
+             {{poruka4}}
+            </div>
+          </div><br>
+
+           <div class="col-lg-12 form-group">
+            Izaberite smer : &nbsp;&nbsp;
+            <select name="smer" id="" [(ngModel)]="smer">
+                <option value="si">Softversko inzenjerstvo</option>
+                <option value="rti">Racunarska tehnika i informatika</option>
+                <option value="ostalo">Ostalo</option>
+                <option value="master">Master studije</option>
+            </select>
+
+
+            <div class="poruka">
+             {{poruka5}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="fond"id="" placeholder="Unesite fond casova" [(ngModel)]="fond" />
+            <div class="poruka">
+             {{poruka6}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="cilj" id="" placeholder="Unesite cilj predmeta" [(ngModel)]="cilj" />
+            <div class="poruka">
+             {{poruka7}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="termin_predavanja" id="" placeholder="Unesite termin predavanja" [(ngModel)]="termin_predavanja" />
+            <div class="poruka">
+             {{poruka8}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="termin_vezbi" id="" placeholder="Unesite termin vezbi" [(ngModel)]="termin_vezbi" />
+            <div class="poruka">
+             {{poruka9}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="lab" id="" placeholder="Da li postoje lab vezbe" [(ngModel)]="lab" />
+            <div class="poruka">
+             {{poruka10}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+            <input type="text" name="propozicije" id="" placeholder="Unesite propozicije" [(ngModel)]="propozicije" />
+            <div class="poruka">
+             {{poruka11}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+            Izaberite semestar : &nbsp;&nbsp;
+            <select name="semestar" id="" [(ngModel)]="semestar">
+                <option value="1">I semsestar</option>
+                <option value="2">II semestar</option>
+                <option value="3">III semestar</option>
+                <option value="4">IV semestar</option>
+                <option value="5">V semestar</option>
+                <option value="6">VI semestar</option>
+                <option value="7">VII semestar</option>
+                <option value="8">VIII semestar</option>
+            </select>
+
+
+            <div class="poruka">
+             {{poruka12}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+            Izbor za predavanje : &nbsp;&nbsp;
+            <select multiple name="predavanja" (change)="onChange($event.target.value)" [(ngModel)]="predavanja">
+                <option *ngFor="let nas of sviZaposleni" [ngValue]="nas">
+                    {{nas.username}}
+                </option>
+            </select>
+
+
+            <div class="poruka">
+             {{poruka13}}
+            </div>
+          </div><br>
+          <div class="col-lg-12 form-group">
+            Izbor za vezbe : &nbsp;&nbsp;
+            <select name="vezbe" multiple (change)="onChange2($event.target.value)" [(ngModel)]="vezbe" >
+                <option *ngFor="let nas of sviZaposleni" [ngValue]="nas">
+                    {{nas.username}}
+                </option>
+            </select>
+
+
+            <div class="poruka">
+             {{poruka14}}
+            </div>
+          </div><br>
+        
+
+
+      </div>
+     
+      <div class="text-center"><button type="submit" (click)="dodaj()">Dodaj Predmet</button></div>
+      <br>
+      <div class="uspeh" align="center">
+        {{PorukaUspeh}}
+      </div>
+      <br>
+      <br>
+      <br>
+ 
+   
+    
+  </form>
+  </div>
+ 
+  
+ 
+    </div>
+  
+</section>

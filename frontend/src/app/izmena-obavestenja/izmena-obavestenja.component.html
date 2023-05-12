@@ -1,0 +1,76 @@
+
+<br><br><br><br>
+
+<table>
+    <tr>
+        <th>Sadrzaj</th>
+        <th>Naslov</th>
+        <th>Tip</th>
+        <th>Datum</th>
+        
+    </tr>
+    <tr>
+
+    </tr>
+    <tr *ngFor="let obv of svaObavestenja">
+        <td>
+            {{obv.sadrzaj}}
+        </td>
+        <td name="naslov">
+           
+                {{obv.naslov}}
+          
+            
+        </td>
+        <td name="tip">
+            {{obv.tip}}
+        </td>
+        <td>
+            {{obv.datum}}
+        </td>
+        <td>
+            <input type="button" value="Azuriraj" (click)="menjaj(obv)">
+        </td>
+    </tr>
+</table>
+
+<br><br><br>
+
+<table>
+    
+    <tr>
+        <td>
+            <b>Unesite nov izmenjeni sadrzaj :</b>
+        </td>
+        <td>
+            <textarea name="sadrzaj" id="" cols="30" rows="10" [(ngModel)]="sadrzaj"></textarea>
+        </td>
+        <td >
+            <div class="crvena">
+                {{porukaNeuspeh}}
+            </div>
+        </td>
+    </tr>
+   
+</table>
+
+<div class="poruka">
+    {{poruka}}
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+<br>
+<br>
+<br>
+<br>
+<br>

@@ -1,0 +1,78 @@
+<section id="faq" class="faq section-bg">
+    <div class="container">
+
+      <div class="section-title">
+        <h2>Zaposleni na našoj katedri</h2>
+      </div>
+
+      <div class="row  d-flex align-items-stretch">
+
+        <div class="col-lg-12 faq-item" data-aos="fade-up">
+       
+        
+            <table>
+              
+                <tr >
+                    <th>Ime</th>
+                 
+                    <th>Prezime</th>
+                    <th>Mejl</th>
+                    <th>Sajt</th>
+                    <th>Spisak predmeta</th>
+                    
+                </tr>
+                <tr>
+                    
+                </tr>
+                <tr *ngFor="let zap of sviZaposleni">
+                    <td>
+                        {{zap.ime}}
+                    </td>
+                    <td>
+                        {{zap.prezime}}
+                    </td>
+                    <td>
+                        {{zap.username}}
+                    </td>
+                    <td>
+                        <a class="link" (click)="radi(zap.username)">
+                            {{zap.sajt}}
+                        </a>
+                    </td>
+                    <td>
+                       
+                        <div *ngFor="let predmet of sviPredmeti">
+                        
+                            <div *ngIf="zap.username==predmet.nastavnik_predavanje1 || zap.username==predmet.nastavnik_predavanje2 || zap.username==predmet.nastavnik_vezbe1 || zap.username==predmet.nastavnik_vezbe2 ">
+
+                               
+
+
+                              {{predmet.naziv}}
+                              
+                                
+
+                            </div>
+                         
+                        
+
+                        </div>
+                        
+                        <hr>
+                   
+                    </td>
+                    
+                </tr>
+
+            </table>
+        
+        </div>
+
+     
+           
+           </div>
+
+      </div>
+
+    
+  </section><!-- End Frequently Asked Questions Section -->
